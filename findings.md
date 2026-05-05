@@ -24,8 +24,8 @@ Spec canonique dit `𝕮ₙ ≡ task_plan.md` (fichier PWF markdown). Claire imp
 ### C3 — Double fichier 𝕍
 `050_𝕍` (sprint 0) et `0150_𝕍` (sprint 1+) — même morphisme défini deux fois. Fusionner en `𝕍ₙ` générique.
 
-### C4 — Périmètre Claire non documenté
-Claire implémente φ₀ + 𝕍 uniquement. 𝕊₀ (sprint execution) hors scope Sprint 1. À documenter dans CONTRACTS.md.
+### C4 — Périmètre Claire non documenté ✅ RÉSOLU
+**Décision (2026-05-05) :** Documenté dans CONTRACTS.md section "Périmètre CPE" et "Notation μ".
 
 ### C5 — Numérotation incohérente clear-sky
 Deux schémas : `010_` (3 chiffres) et `0100_` (4 chiffres). Renuméroter uniformément.
@@ -59,6 +59,16 @@ Deux schémas : `010_` (3 chiffres) et `0100_` (4 chiffres). Renuméroter unifor
 | PROOF_REGEX flag g + groupes (?:...) | Éviter .test() stateful et inflation .match() |
 | suppressHydrationWarning html + textarea | LanguageTool injecte des attributs DOM |
 | text-black direct sur chaque élément | body text-gray-900 ne cascade pas (Tailwind v4 + browser defaults) |
+
+---
+
+## 🔭 Prochaine étape (Phase 1)
+
+Sources à relire pour rétro-ingénierie :
+- `vault/protocole/CPE/sources/clear-sky/` — 20 fiches spec (objets + morphismes du pipeline)
+- `vault/protocole/CPE/sources/saas-traduction/` — templates PWF (task_plan, findings, progress)
+
+Objectif : comprendre comment chaque élément CPE étend ou inclut Scrum/Agile (PSPO), et résoudre C1/C3/C5 dans les sources vault.
 
 ---
 
