@@ -81,3 +81,15 @@ interface GenerateError {
 - Le scoring est calculé dans lib/scoring.ts, pas par le LLM
 - Le LLM retourne uniquement le contrat (pas les scores)
 - Les scores sont déterministes (même contrat = même score)
+
+## Périmètre CPE
+
+Claire implémente les étapes φ₀ + 𝕍 du pipeline CPE.
+Les étapes ε₀ → τ₀ → κ₀ → 𝕮₁ (raffinement) sont prévues en Sprint 2.
+𝕊₀ (sprint execution) est hors scope — Claire produit le contrat, pas le sprint.
+
+## Notation μ
+
+- `μA` / `μV` : métriques de scoring propres à Claire (ambiguïté / validation). ∈ [0,1].
+- Ces symboles sont distincts de `μₙ` dans la spec CPE canonique, où μₙ désigne le morphisme d'instanciation du sprint (μₙ : 𝕮ₙ → 𝕊ₙ).
+- PASS ⟺ μA(C) < 0.5 AND μV(C) ≥ 0.4

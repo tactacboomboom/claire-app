@@ -15,8 +15,11 @@
 ### C1 — 𝕮ₙ ≡ task_plan.md
 Spec canonique dit `𝕮ₙ ≡ task_plan.md` (fichier PWF markdown). Claire implémente 𝕮₀ comme `SprintContract` (TypeScript). Résolution : 𝕮ₙ = objet logique abstrait. Les deux sont des implémentations.
 
-### C2 — Collision symbole μ
-Spec : μₙ = morphisme d'instanciation du sprint. Claire : μA/μV = métriques de scoring. Même lettre, deux concepts distincts. Options : renommer en αA/αV, ou documenter la distinction.
+### C2 — Collision symbole μ ✅ RÉSOLU
+**Décision (2026-05-05) :** Garder μA/μV dans Claire.
+**Distinction à documenter dans CONTRACTS.md :**
+- μA / μV = métriques de scoring du contrat (ambiguïté / validation) — propres à Claire
+- μₙ = morphisme d'instanciation du sprint dans la spec CPE canonique — hors scope Claire Sprint 1
 
 ### C3 — Double fichier 𝕍
 `050_𝕍` (sprint 0) et `0150_𝕍` (sprint 1+) — même morphisme défini deux fois. Fusionner en `𝕍ₙ` générique.

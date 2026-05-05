@@ -9,7 +9,7 @@ Refactoriser le repo Claire en appliquant la méthode PWF : corriger les contrad
 ## 🗓 Phases
 
 ### Phase 1 : Gouvernance des specs
-- [ ] Résoudre C2 — collision symbole μ (μₙ exécution ≠ μA/μV scoring)
+- [x] Résoudre C2 — collision symbole μ → DÉCISION : garder μA/μV, documenter la distinction dans CONTRACTS.md (μA/μV = métriques scoring ≠ μₙ = morphisme d'exécution CPE)
 - [ ] Résoudre C1 — 𝕮ₙ ≡ task_plan.md → clarifier objet logique vs implémentation
 - [ ] Résoudre C3 — fusionner les deux fichiers 𝕍 en 𝕍ₙ générique
 - [ ] Résoudre C4 — documenter périmètre Claire : φ₀ + 𝕍 seulement (𝕊₀ hors scope Sprint 1)
