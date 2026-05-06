@@ -62,6 +62,28 @@ Deux schémas : `010_` (3 chiffres) et `0100_` (4 chiffres). Renuméroter unifor
 
 ---
 
+## 🧠 Décisions Architecturales — Session 2026-05-06
+
+### Insight fondamental : CPE doit être nilpotent
+Le pipeline CPE converge vers 𝕋ᴳ (attracteur global) si et seulement si 𝕽 force l'écriture des décisions. Sans ça, il dégénère :
+- Sans 𝕽 → **identité** (chaque sprint produit le même contrat, 𝕄ₙ vide)
+- Sans 𝕋ᴳ → **circulaire** (sprints produisent des artefacts sans direction)
+- Avec 𝕽 + 𝕋ᴳ + Δ₀ actifs → **nilpotent** (convergence réelle vers l'objectif)
+
+### Décision A : 𝕽 = PWF → Claire automatise les fichiers
+Claire doit générer/mettre à jour automatiquement `task_plan.md`, `findings.md`, `progress.md` après chaque sprint. C'est ce qui garantit que 𝕄ₙ s'enrichit réellement entre les cycles.
+**Implication code :** nouvel endpoint ou action post-génération qui écrit les fichiers PWF.
+
+### Décision B : Δ₀ = filtre per-prompt (capteur anti-dérive)
+À chaque message humain, Claire évalue si la question est dans le périmètre du sprint actuel. Si hors-sprint, Claire répond : "cette question s'écarte du contrat en cours — revenir au sprint ou créer un nouveau sprint."
+**Implication code :** system prompt inclut le contrat actuel comme référence, avec instruction de flagging.
+
+### Décision C : 𝕋ᴳ = objet contraint (pas texte libre)
+Le champ `globalAttractor` dans `SprintContract` est actuellement un `string` libre. Il doit devenir un objet structuré contraint par 𝕽, pour que κₙ puisse s'appuyer dessus formellement.
+**Implication code :** nouveau type `GlobalAttractor { vision: string, constraints: string[], scope: string }` dans CONTRACTS.md.
+
+---
+
 ## 🔭 Prochaine étape (Phase 1)
 
 Sources à relire pour rétro-ingénierie :

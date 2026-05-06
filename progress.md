@@ -25,6 +25,22 @@
 
 ---
 
+## 📅 Session du : 2026-05-06
+
+### Phase 1 : Rétro-ingénierie CPE (début)
+- **Status :** in_progress
+- **Actions :**
+  - Créé `specs/index.html` dans repo `Claire` (GitHub) — viewer VSCode-like, 21 fiches clear-sky + 15 saas-traduction
+  - Déployé sur Vercel (vercel.json static + redirect root → /specs/)
+  - Rétro-ingénierie fiche `000_CANONICAL_PIPELINE_EQUATION` via protocole fmaths (Décodeur)
+  - Analyse nilpotence-cognitive appliquée au pipeline CPE
+- **Décisions majeures (→ findings.md Décisions A/B/C) :**
+  - 𝕽 = PWF → Claire doit automatiser l'écriture des fichiers PWF
+  - Δ₀ = filtre per-prompt (capteur anti-dérive à chaque message)
+  - 𝕋ᴳ = objet contraint (plus un string libre)
+
+---
+
 ## 📋 Historique Sprint 1 (rétroactif)
 
 Sprint 1 a produit (déployé sur Vercel) :

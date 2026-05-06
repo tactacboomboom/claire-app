@@ -39,13 +39,16 @@ Sources à couvrir :
 ### Phase 4 : Refactor CONTRACTS.md + nouveaux types
 - [ ] Ajouter type `FailingItem` pour ε₀
 - [ ] Ajouter type `RefinementMessage` pour τ₀ → 𝕄₀
+- [ ] Remplacer `globalAttractor: string` par `GlobalAttractor { vision, constraints[], scope }` — Décision C
 - [ ] Vérification ontologique CONTRACTS.md × spec clear-sky
 - **Status:** pending (après Phase 3)
 
-### Phase 5 : Implémenter ε₀ + κ₀ (boucle de raffinement)
+### Phase 5 : Implémenter ε₀ + κ₀ + 𝕽 (boucle de raffinement + PWF automatique)
 - [ ] `lib/diagnostics.ts` — checks A1/A2/A3/V1/V2/V3 par item
 - [ ] `lib/refine.ts` — prompts ciblés par item failing
 - [ ] Loop jusqu'à μA = 0 ou max 3 itérations
+- [ ] **PWF auto-write** : après chaque génération, écrire task_plan / findings / progress — Décision A
+- [ ] **Δ₀ per-prompt** : system prompt inclut le contrat actuel, Claire flague les questions hors-sprint — Décision B
 - **Status:** pending
 
 ### Phase 6 : UI sprint2 + personas PSPO
